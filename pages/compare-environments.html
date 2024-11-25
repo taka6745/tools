@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Compare Environments</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/compare-environments.js" defer></script>
+  <script src="js/compare_environments.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>Tools for Compliance</h1>
+    <h1>Tools</h1>
     <nav>
       <a href="home.html">Home</a>
       <a href="compare-environments.html">Compare Environments</a>
@@ -19,16 +19,68 @@
   <main>
     <h2>Compare Environments</h2>
     <p>
-      The Compare Environments tool helps ensure your environments remain compliant and consistent.
+      The Compare Environments tool helps you identify differences between two environments by comparing file checksums in a directory.
     </p>
     <button id="download-tool">Download Latest Version</button>
     <div id="release-notes">
       <h3>Release Notes:</h3>
       <p>Loading...</p>
     </div>
+    
+    <div class="section">
+      <h3>How to Use</h3>
+      <ol>
+        <li>Download the latest version of the tool by clicking the <strong>"Download Latest Version"</strong> button above.</li>
+        <li>Run the checksum application on the <strong>first directory</strong> you want to compare. 
+          <ul>
+            <li>Select the directory to checksum.</li>
+            <li>Choose the number of workers (threads).</li>
+            <li>Choose the algorithm (ensure this is the same for both directories).</li>
+          </ul>
+        </li>
+        <li>Run the checksum application on the <strong>second directory</strong> with the same settings.</li>
+        <li>Run the compare application to process the outputs from the checksum steps.</li>
+        <li>Analyze the results:
+          <ul>
+            <li>The output will be a CSV file showing the differences, including missing or modified files.</li>
+            <li>The file structure will be preserved for easy navigation.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+
+    <div class="section">
+      <h3>Example Workflow</h3>
+      <pre class="code-block">
+      1. Run the checksum application on directory A:
+         - Directory: /path/to/directoryA
+         - Algorithm: SHA256
+         - Workers: 4
+
+      2. Run the checksum application on directory B:
+         - Directory: /path/to/directoryB
+         - Algorithm: SHA256
+         - Workers: 4
+
+      3. Run the compare application:
+         - Input: DirectoryA and DirectoryB
+      </pre>
+      <p>
+        In this example, the Compare Environments tool will output 2 CSV files, <strong>differences.csv</strong> and <strong>missing.csv</strong>, showing the missing and modified files in the two directories.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Best Practices</h3>
+      <ul>
+        <li>Always use the same algorithm (e.g., SHA256) for both directories to ensure accurate comparisons.</li>
+        <li>Use an appropriate number of workers based on your system's performance.</li>
+        <li>Organize the output files in a dedicated folder for easier processing.</li>
+      </ul>
+    </div>
   </main>
   <footer>
-    <p>&copy; 2024 Tools for Compliance. All rights reserved.</p>
+    <p>&copy; 2024 Tools. All rights reserved.</p>
   </footer>
 </body>
 </html>
