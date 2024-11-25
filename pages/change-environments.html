@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Environments</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/compare-environments.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Tools for Compliance</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="compare-environments.html">Compare Environments</a>
+      <a href="change-environments.html">Change Environments</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Change Environments</h2>
+    <p>
+      The Change Environments tool helps ensure your environments remain compliant and consistent.
+    </p>
+    <button id="download-tool">Download Latest Version</button>
+    <div id="release-notes">
+      <h3>Release Notes:</h3>
+      <p>Loading...</p>
+    </div>
+    
+    <div class="section">
+      <h3>How to Use</h3>
+      <ol>
+        <li>Download the latest version of the tool by clicking the <strong>"Download Latest Version"</strong> button above.</li>
+        <li>Ensure you have the required <strong>customer configuration folder</strong>. If you don't have it, you can download the default configuration by clicking the button below:</li>
+        <button onclick="window.location.href='https://github.com/taka6745/Change-Environments/tree/main/customers';">
+          Download Default Configuration
+        </button>
+        <li>
+          Place the configuration folder inside the same directory as the tool executable.
+        </li>
+        <li>Run the tool and follow the prompts or graphical interface to change or compare environments.</li>
+        <li>If you want to create your own configuration, follow the example directory tree and YAML format provided below.</li>
+      </ol>
+    </div>
+
+    <div class="section">
+      <h3>Example Directory Tree</h3>
+      <pre class="code-block">
+      customers/
+      ├── QAS/
+      │   ├── Project23/
+      │   │   ├── interface.ps1
+      │   │   ├── workstation.ps1
+      │   ├── QAS.yaml
+      └── customers.yaml
+      </pre>
+      <p>
+        In the directory above:
+        <ul>
+          <li><strong>customers.yaml</strong>: Contains a list of all customers.</li>
+          <li><strong>QAS.yaml</strong>: Defines environments (e.g., "Project23") and associated scripts.</li>
+          <li>Each environment folder (e.g., "Project23") contains the specific scripts (e.g., "interface.ps1").</li>
+        </ul>
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>YAML File Example</h3>
+      <pre class="code-block">
+      customers:
+        - QAS
+
+      QAS:
+        - Project23:
+          - Version: "23.1.3.3"
+          - Workstation: "workstation.ps1"
+          - Interface: "interface.ps1"
+      </pre>
+      <p>
+        This YAML defines the customer "QAS" and its environments. Each environment has associated scripts for specific operations.
+      </p>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Tools for Compliance. All rights reserved.</p>
+  </footer>
+</body>
+</html>
