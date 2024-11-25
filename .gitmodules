@@ -1,0 +1,3 @@
+[submodule "compare-environments"]
+	path = compare-environments
+	url = https://github.com/taka6745/compare-environments.git
