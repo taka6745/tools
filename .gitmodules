@@ -4,3 +4,6 @@
 [submodule "Change-Environments"]
 	path = Change-Environments
 	url = https://github.com/taka6745/Change-Environments.git
+[submodule "CacheClearer"]
+	path = CacheClearer
+	url = https://github.com/taka6745/CacheClearer.git
