@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RaceCondition</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/race_condition.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Tools</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="compare-environments.html">Compare Environments</a>
+      <a href="change-environments.html">Change Environments</a>
+      <a href="cache-clearer.html">Cache Clearer</a>
+      <a href="race-condition.html">RaceCondition</a>
+    </nav>
+  </header>
+  <main>
+    <h2>RaceCondition</h2>
+    <p>
+      RaceCondition is a custom-styled Tkinter application designed to help test race conditions. It features two main tabs: Mouse Clicker and Key Clicker. Each tab provides unique functionalities to simulate and test race conditions effectively.
+    </p>
+    <button id="download-tool" onclick="window.location.href='https://github.com/taka6745/RaceCondition/releases'">Download Latest Version</button>
+    <div id="release-notes">
+      <h3>Release Notes:</h3>
+      <p>Visit the GitHub page to view release notes for the latest updates.</p>
+    </div>
+
+    <div class="section">
+      <h3>Features</h3>
+      <h4>Mouse Clicker</h4>
+      <ul>
+        <li><strong>Time Input:</strong> Set a specific time for the mouse click event. Default is the current time but adjustable to the future.</li>
+        <li><strong>Record Start Position:</strong> Tracks and records the mouse position after hiding the application.</li>
+        <li><strong>Countdown and Click:</strong> Moves the mouse to the recorded position and clicks at the end of the countdown.</li>
+        <li><strong>Clock Animation:</strong> Visualizes the countdown with a 60-second clock and 1-second clock.</li>
+      </ul>
+
+      <h4>Key Clicker</h4>
+      <ul>
+        <li><strong>Keyboard Layout:</strong> Select a key from a visual keyboard layout for simulation.</li>
+        <li><strong>Time Input:</strong> Set a specific time for the key press event.</li>
+        <li><strong>Window Focus:</strong> Focuses on a selected window from a dropdown before pressing the key.</li>
+        <li><strong>Countdown and Key Press:</strong> Simulates the key press when the timer reaches zero.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Installation</h3>
+      <p>
+        To run the RaceCondition application, ensure you have Python and Tkinter installed. Clone the repository and execute the main Python script.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Usage</h3>
+      <ol>
+        <li>Launch the application.</li>
+        <li>Navigate to the desired tab (Mouse Clicker or Key Clicker).</li>
+        <li>Configure the settings as per your requirements.</li>
+        <li>Start the test and observe the results.</li>
+      </ol>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Tools. All rights reserved.</p>
+    </footer>
+  </main>
+</body>
+</html>
