@@ -7,3 +7,6 @@
 [submodule "CacheClearer"]
 	path = CacheClearer
 	url = https://github.com/taka6745/CacheClearer.git
+[submodule "RaceCondition"]
+	path = RaceCondition
+	url = https://github.com/taka6745/RaceCondition.git
